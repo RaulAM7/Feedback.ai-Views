@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Digest Report</title>
+    <style>
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header-buttons a {
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #2CD8D5;
+            color: #ffffff;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons a:hover {
+            background-color: #28b5b3;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #2CD8D5;
+            padding-bottom: 5px;
+        }
+
+        .summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .summary-item {
+            text-align: center;
+        }
+
+        .summary-item span {
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .date-range {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .data-table th {
+            background-color: #2CD8D5;
+            color: #fff;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        .recommendations {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #2CD8D5;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta a:hover {
+            background-color: #28b5b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-title">💡Feedback.ai💡</div>
+        <h2>📊 Feedback Digest Report</h2>
+        <div class="header-buttons">
+            <a href="#">Save Progress</a>
+            <a href="#">Settings</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Date Range Section -->
+        <div class="date-range">
+            <h2>Fecha report: Semana del 13 al 19 de Noviembre</h2>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section">
+            <div class="summary">
+                <div class="summary-item">
+                    <span>45</span>
+                    📝 Total Feedback
+                </div>
+                <div class="summary-item">
+                    <span>Bug en Login</span>
+                    ⭐ Más Votado
+                </div>
+                <div class="summary-item">
+                    <span>3</span>
+                    🚨 Bugs Críticos
+                </div>
+            </div>
+        </div>
+
+        <!-- Resumen Ejecutivo -->
+        <div class="section">
+            <div class="section-title">🔍 Resumen Ejecutivo</div>
+            <p>Esta semana se recibieron <span class="highlight">45 nuevos reportes</span>, con un incremento del 20% en ideas sugeridas. Los bugs críticos más mencionados están relacionados con el login.</p>
+            <ul>
+                <li>Total feedback recibido: 45 (Bugs: 20, Ideas: 15, Otros: 10).</li>
+                <li>Distribución por estado: Resolved (10), In Progress (20), Open (15).</li>
+                <li>Comparativa con el periodo anterior: +20% en nuevos reportes.</li>
+            </ul>
+        </div>
+
+        <!-- Análisis por Categorías -->
+        <div class="section">
+            <div class="section-title">📂 Análisis por Categorías</div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Título</th>
+                        <th>Estado</th>
+                        <th>Votos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bug</td>
+                        <td>Bug crítico en Login</td>
+                        <td>Open</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>Idea</td>
+                        <td>Agregar Modo Oscuro</td>
+                        <td>In Progress</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Otro</td>
+                        <td>Mejorar rendimiento en la página de inicio</td>
+                        <td>Resolved</td>
+                        <td>20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Detalles Destacados -->
+        <div class="section">
+            <div class="section-title">🌟 Feedback Destacado</div>
+            <ul>
+                <li><strong>"Bug crítico en Login"</strong>: Problema al autenticar usuarios. Estado: Open.</li>
+                <li><strong>"Agregar Modo Oscuro"</strong>: Solicitud recurrente por usuarios nocturnos. Estado: In Progress.</li>
+            </ul>
+        </div>
+
+        <!-- Recomendaciones de la IA -->
+        <div class="section">
+            <div class="section-title">🧠 Recomendaciones de la IA</div>
+            <div class="recommendations">
+                <p>Se detectaron múltiples solicitudes relacionadas con accesibilidad (teclado/tabulación). Considere priorizar esta área.</p>
+                <p>Los usuarios sugieren un rediseño del sistema de notificaciones para incluir recordatorios más visibles.</p>
+                <p><strong>Próxima acción sugerida:</strong> "Agregar validación visual para accesibilidad".</p>
+            </div>
+            <div class="cta">
+                <a href="/AI Features/product-wizard.html">Ir a Product Ideas Brainstorm Wizard</a>
+            </div>
+        </div>
+
+        <!-- Acciones Recomendadas -->
+        <div class="section">
+            <div class="section-title">🚀 Próximas Acciones</div>
+            <div class="cta">
+                <a href="/AI Features/ai-product-matrix-feature.html">Generar Prioritization Matrix</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

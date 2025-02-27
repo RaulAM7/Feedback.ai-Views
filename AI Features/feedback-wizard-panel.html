@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback AI Wizard Menu</title>
+    <style>
+        /* Global Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700&display=swap');
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header-buttons a {
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #2CD8D5;
+            color: #ffffff;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons a:hover {
+            background-color: #28b5b3;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* Wizard Container */
+        .wizard-container {
+            display: flex;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .wizard-card,
+        .wizard-benefits {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .wizard-card img {
+            max-width: 100px;
+            margin: 0 auto 15px;
+        }
+
+        .wizard-card.green {
+            border-top: 8px solid #CFF09E;
+        }
+
+        .wizard-card h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .wizard-card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .wizard-benefits h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .wizard-benefits ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        .wizard-benefits ul li {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        /* Features Column */
+        .features-column {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-card img {
+            max-width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .feature-card .cta-button {
+            background-color: #2CD8D5;
+            color: #ffffff;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .feature-card .cta-button:hover {
+            background-color: #28b5b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .wizard-container {
+                flex-direction: column;
+            }
+
+            .features-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-title">💡Feedback.ai💡</div>
+    <div class="header-buttons">
+        <a href="">Login</a>
+        <a href="">Register</a>
+    </div>
+</header>
+
+<div class="main-container">
+    <!-- Wizard Container -->
+    <div class="wizard-container">
+        <div class="wizard-card green">
+            <img src="green-wizard.png" alt="Feedback AI Wizard">
+            <h2>Feedback AI Wizard</h2>
+            <p>Are you <strong>tired of manually managing endless user feedback</strong> and bug reports?</p>
+        </div>
+
+        <div class="wizard-benefits">
+            <h2>What will Feedback AI Wizard Do?<br>  Magic ✨</h2>
+            <ul>
+                <li>Automate your user support management tasks</li>
+                <li>Provide you structured feedback insights</li>
+                <li>Organize your user feedback for better decision-making</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Features Column -->
+    <div class="features-column">
+        <div class="feature-card">
+            <img src="chat-icon.png" alt="Bug Icon">
+            <h3>Bug Reporting Wizard</h3>
+            <p><strong>Improve your users’ reporting</strong> details with an interactive <strong>AI assistant.</strong></p>
+            <a href="/AI Features/ai-bug-reporting-wizard.html" class="cta-button">Summon the Wizard!</a>
+        </div>
+
+        <div class="feature-card">
+            <img src="report-icon.png" alt="Digest Icon">
+            <h3>Feedback Digest Report Generator</h3>
+            <p><strong>Receive regular AI reports</strong> of user feedback to <strong>know what's going on.</strong></p>
+            <a href="/AI Features/ai-feedback-digest-report.html" class="cta-button">Summon the Wizard!</a>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+

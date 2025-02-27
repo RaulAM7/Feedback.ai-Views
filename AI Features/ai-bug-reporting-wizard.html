@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Reporting Wizard</title>
+    <style>
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header-buttons a {
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #2CD8D5;
+            color: #ffffff;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons a:hover {
+            background-color: #28b5b3;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #2CD8D5;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #28b5b3;
+        }
+
+        textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tags span {
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        .type-bug {
+            background-color: #FFEBEE;
+            color: #C62828;
+        }
+
+        .status-not-reviewed {
+            background-color: #FF6F61;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-title">💡Feedback.ai💡</div>
+            <h2>Bug Reporting Wizard | 🤖💬🗨️🤔</h2>
+        <div class="header-buttons">
+            <a href="#">Save Progress</a>
+            <a href="#">Settings</a>
+        </div>
+    </header>
+
+    <section>
+        <div id="step-1">
+            <H3>We will guide you step-by-step to report a problem. Click below to start! 👇</H3>
+            <button onclick="showStep(2)">Start</button>
+        </div>
+
+        <div id="step-2" style="display: none;">
+            <h2>What problem have you found?</h2>
+            <textarea placeholder="Describe the issue..." id="problem-description"></textarea>
+            <button onclick="showStep(3)">Continue</button>
+            <button onclick="showStep(1)">Back</button>
+        </div>
+
+        <div id="step-3" style="display: none;">
+            <h2>Add more details</h2>
+            <p>Steps to reproduce:</p>
+            <textarea placeholder="Step 1..."></textarea>
+            <button onclick="addStep()">Add Step</button>
+            <button onclick="showStep(4)">Continue</button>
+            <button onclick="showStep(2)">Back</button>
+        </div>
+
+        <div id="step-4" style="display: none;">
+            <h2>Attach supporting files</h2>
+            <input type="file">
+            <button onclick="showStep(5)">Continue</button>
+            <button onclick="showStep(3)">Back</button>
+        </div>
+
+        <div id="step-5" style="display: none;">
+            <h2>Review and Submit</h2>
+            <p>Please review your report before submitting.</p>
+            <button onclick="showStep(6)">Submit</button>
+            <button onclick="showStep(4)">Back</button>
+        </div>
+
+        <div id="step-6" style="display: none;" class="container">
+            <h2>Post Details</h2>
+            <div>
+                <p><strong>Description:</strong> Example issue description</p>
+                <div class="tags">
+                    <span class="type-bug">Bug</span>
+                    <span class="status-not-reviewed">Not Reviewed</span>
+                </div>
+            </div>
+            <button onclick="showStep(1)">Report Another Bug</button>
+        </div>
+    </section>
+
+    <script>
+        function showStep(step) {
+            const totalSteps = 6;
+            for (let i = 1; i <= totalSteps; i++) {
+                const stepElement = document.getElementById(`step-${i}`);
+                if (stepElement) {
+                    stepElement.style.display = i === step ? 'block' : 'none';
+                }
+            }
+        }
+
+        function addStep() {
+            const textarea = document.createElement("textarea");
+            textarea.placeholder = "Next step...";
+            textarea.style = "width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ddd;";
+            document.getElementById("step-3").appendChild(textarea);
+        }
+    </script>
+</body>
+
+</html>
